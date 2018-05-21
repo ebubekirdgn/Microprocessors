@@ -1,0 +1,16 @@
+
+;8 bitlik iki sayının toplamı
+
+mvi C,00
+lda 4150
+mov B,A
+lda 4151
+add B
+jnc Loop
+inr C
+
+Loop: sta 4152
+mov A,C
+sta 4153
+
+hlt

@@ -1,0 +1,13 @@
+
+;<Bu program bellekteki 5 adet sayının toplamını verir.>
+
+mvi a,0
+mvi c,5
+lxi h,0
+
+basla: add m
+inx h
+dcr c
+jnz basla
+mov m,a
+hlt

@@ -1,0 +1,19 @@
+
+;<Program title>
+
+stc
+cmc
+mvi B,009Ah
+mvi A,0
+mvi B,0
+lxi H,0
+
+basla: adi 1
+daa
+jnc eldesiz
+inr H
+eldesiz: dcr B
+jnz basla
+mov L,A
+
+hlt

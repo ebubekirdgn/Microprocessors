@@ -1,0 +1,14 @@
+
+;<Program title>
+
+jmp start
+
+;data
+adc h
+adi 12
+
+;code
+start: nop
+
+
+hlt

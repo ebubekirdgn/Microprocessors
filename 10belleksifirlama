@@ -1,0 +1,14 @@
+
+;<Bu program bellekteki kayıtlı olan ilk 10 adresin değerlerini sifirlar.>
+ 
+
+mvi a,0
+lxi h,0
+mvi b,0ah
+
+nxt: mov m,a
+inx h
+dcr b
+jnz nxt
+
+hlt

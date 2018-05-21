@@ -1,0 +1,25 @@
+;<Program title>
+lxi sp ,0FFFh
+mvi b , -45
+mvi c , -110
+mvi d , -93
+mvi e , 12
+
+mov a,c   ; b'yi aya aktar
+call abs  ;abs yi cagir
+mov c,a
+
+ 
+;bura cagirilacak.
+
+abs: mov h,a ; a yi once h ye kaydettik.
+ani 80h ; 10000000 burada en anlamli bite bakiyoruz.
+mov a,h  ; a yı geri aldık.
+rz
+; degilse kısmı burası
+cma ;a'nın tersini al
+inr a ;a yı bir artır yani anın 2 ye göre tümleyenini aldik.
+ret
+
+hlt
+ 

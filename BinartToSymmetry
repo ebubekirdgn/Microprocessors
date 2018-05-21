@@ -1,0 +1,21 @@
+
+;<Program title>
+
+stc
+cmc
+mvi B,218
+mvi C,0
+mvi D,8
+
+
+basla: mov A,B
+rlc
+
+mov B,A
+mov A,C
+rar
+mov C,A
+dcr D
+jnz basla
+
+hlt

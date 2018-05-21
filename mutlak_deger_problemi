@@ -1,0 +1,10 @@
+;<Program title>
+
+lxi b , 0F2A3h
+lxi d , 078Bh
+push b
+push d
+pop b
+pop d
+hlt
+ 

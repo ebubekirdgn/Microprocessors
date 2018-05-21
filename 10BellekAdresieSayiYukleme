@@ -1,0 +1,13 @@
+
+;<Program title>
+
+mvi a,0FFH
+lxi h,0200H
+mvi b,0ah
+
+nxt: mov m,a
+inr h
+dcr b
+jnz nxt 
+
+hlt

@@ -1,0 +1,30 @@
+
+;<Program title>
+
+mvi a,38h
+sta 0200h
+mvi a,21
+sta 0201h
+mvi a,29h
+sta 0202h
+mvi a,01fh
+sta 0203h
+
+lxi b,0200h
+lxi h,0202h
+lxi d,0204h
+cmc
+mvi a,2
+
+more: sta tmp
+ldax b
+adc m
+stax d
+inx b
+inx h
+inx d
+lda tmp
+dcr a
+jnz more
+
+tmp DS 1

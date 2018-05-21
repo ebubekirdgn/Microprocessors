@@ -1,0 +1,19 @@
+
+;<Program title>
+
+mvi C,00
+lda 4150
+mov B,A
+lda 4151
+sub B
+jnc Loop
+cma
+inr A
+inr C
+
+Loop: sta 4152
+mov A,C
+sta 4152
+mov A,C
+sta 4153
+hlt

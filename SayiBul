@@ -1,0 +1,19 @@
+
+;<Bellekte 0200H adresinden baslayarak 100 bellek konumunda onaltılı sayı FF'in kaç kere kullanıldığını bulan program>
+ 
+
+lxi h,0200h         ;HL'ye 0200H 'i yükle
+mvi b, 64h          ;B = 100 16lık olarak 64h
+mvi c,0		    ;C yazmacını sıfırla
+mvi a,0ffh          ;Akümülatöre FF değerini yükle
+
+
+more: cmp m      ;HL'de FF verisi var midir?
+jnz no	         ;Değilse atla
+inr c	         ;C yi 1 artır
+
+no: inx h	 ;HL'yi 1 artır
+dcr b            ;B'yi 1 azalt
+jnz more         ;Tümü için tekrarla
+mov a,c          ;Sonucu Akümülatöre yerleştir.
+hlt

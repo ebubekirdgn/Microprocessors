@@ -1,0 +1,10 @@
+
+;<Program title>
+
+mvi a,0     ; Akümülatörü sıfırlar
+lxi h,0400h ; 0400h deki adresi h yazmacina yukle
+mov m,a     ; Akümülatördeki değeri(sifir var suan)m belleğine yukle
+inr l       ; increase ile l yazmacının adresi 1 artırıldı ve simdi 0401'i gösteriyor.
+mov m,a     ; 0401 adresinde sifirlandi
+
+hlt	    ; Bitiş

@@ -1,0 +1,10 @@
+
+;<0400h ve 0401h bellek konumlarının içeriğini toplamak ve daha sonra toplamını 0402h adresinde yazdırma  >
+
+lxi h,0400h   ;Hl'yi 0400H ile yükle
+mov a,m	      ;İlk baytı Akümülatörde sakla	
+inr l         ;0401H adresini işaret et
+add m	      ;Akümülatör ile M(Hl)'yi topla
+inr l	      ;0402H işaret et
+mov m,a	      ;0402H 'de sonucu sakla.
+hlt
